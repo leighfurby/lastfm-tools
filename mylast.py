@@ -24,11 +24,11 @@ lastfm_network = pylast.LastFMNetwork(
 
 # Windows cmd.exe cannot do Unicode so encode first
 def print_it(text):
-    print text.encode('utf-8')
+    print (text)
 
 
 def print_track(track):
-    unicode_track = unicode(str(track.track), 'utf8')
+    unicode_track = str(track.track)
     print_it(track.playback_date + "\t" + unicode_track)
 
 TRACK_SEPARATOR = u" - "
